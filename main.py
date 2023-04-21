@@ -12,6 +12,7 @@ def do_cipher_of_caesar(text, key, just_letters):
     return encrypted_text
 
 number_of_lines = range(int(input()))
+encrypted_texts = []
 
 for i in number_of_lines:
     text = input()
@@ -26,5 +27,7 @@ for i in number_of_lines:
     second_half_text = do_cipher_of_caesar(second_half_text, -1, False)
     
     encrypted_text = first_half_text + second_half_text
-
+    encrypted_texts.append(encrypted_text)
+    
+for encrypted_text in encrypted_texts:
     print(encrypted_text)
